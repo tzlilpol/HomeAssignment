@@ -27,6 +27,7 @@ function SearchBar(props) {
             }}
           >
             <IconButton
+              disabled={props.term === "" ? true : false}
               aria-label="add to favorites"
               onClick={props.onTermSubmit}
             >

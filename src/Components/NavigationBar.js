@@ -7,12 +7,17 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import AppsIcon from "@material-ui/icons/Apps";
 import { NavLink } from "react-router-dom";
 function NavigationBar(props) {
+  // style
   const classes = useStyles();
+
+  // hooks
   const [value, setValue] = React.useState(1);
 
+  //functions
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <div className={classes.root}>
       <Paper square className={classes.root}>
@@ -29,7 +34,7 @@ function NavigationBar(props) {
           <Tab
             icon={
               <NavLink to="/">
-                <AppsIcon />
+                <AppsIcon fontSize="large" />
               </NavLink>
             }
             label="Browse Beers"
